@@ -6,7 +6,7 @@
 	<packaging>jar</packaging>
 	<name>W3C WSDL 2.0</name>
 	<parent>
-		<groupId>org.hisrc.w3c</groupId>
+		<groupId>org.w3c-schemas</groupId>
 		<artifactId>w3c-schema-parent</artifactId>
 		<version>1.4.1-SNAPSHOT</version>
 		<relativePath>../../schema-parent/pom.xml</relativePath>
