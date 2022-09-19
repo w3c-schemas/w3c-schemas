@@ -29,3 +29,12 @@ unmarshaller.unmarshalFile("tests/locator-01.xml", function(result) {
 	test.done();
 });
 ```
+
+# Changelog
+
+## 2.0.0
+
+- use new group id `org.w3c-schemas`
+- require Java 8
+- update dependencies
+- add `AUTOMATIC-MODULE-NAME` entries to jar files
