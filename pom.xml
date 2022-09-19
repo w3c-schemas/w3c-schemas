@@ -7,7 +7,7 @@
 	<version>1.4.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>W3C Schemas Project</name>
-	<url>https://github.com/highsource/w3c-schemas</url>
+	<url>https://github.com/w3c-schemas/w3c-schemas</url>
 	<description>W3C Schemas project provides JAXB and Jsonix bindings for some of the XML Schemas defined by W3C.</description>
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
@@ -16,7 +16,7 @@
 	</parent>
 	<issueManagement>
 		<system>GitHub Issues</system>
-		<url>https://github.com/highsource/w3c-schemas/issues</url>
+		<url>https://github.com/w3c-schemas/w3c-schemas/issues</url>
 	</issueManagement>
 	<inceptionYear>2014</inceptionYear>
 	<developers>
@@ -34,9 +34,9 @@
 		</license>
 	</licenses>
 	<scm>
-		<connection>scm:git:git@github.com:highsource/w3c-schemas.git</connection>
-		<developerConnection>scm:git:git@github.com:highsource/w3c-schemas.git</developerConnection>
-		<url>https://github.com/highsource/w3c-schemas</url>
+		<connection>scm:git:git@github.com:w3c-schemas/w3c-schemas.git</connection>
+		<developerConnection>scm:git:git@github.com:w3c-schemas/w3c-schemas.git</developerConnection>
+		<url>https://github.com/w3c-schemas/w3c-schemas</url>
 	</scm>
 	<modules>
 		<!-- Schemas -->
