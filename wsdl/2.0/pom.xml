@@ -11,6 +11,13 @@
 		<version>2.0.0</version>
 		<relativePath>../../schema-parent/pom.xml</relativePath>
 	</parent>
+	<dependencies>
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
 	<build>
 		<defaultGoal>install</defaultGoal>
 		<plugins>
