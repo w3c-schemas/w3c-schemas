@@ -1,0 +1,1 @@
+This directory will contain javascript files extracted from the maven artifacts of the other modules.

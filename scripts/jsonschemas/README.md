@@ -1,0 +1,1 @@
+This directory will contain json schemas extracted from the maven artifacts of the other modules.
