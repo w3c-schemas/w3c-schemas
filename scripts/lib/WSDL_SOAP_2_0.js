@@ -4,28 +4,6 @@ var WSDL_SOAP_2_0_Module_Factory = function () {
     dens: 'http:\/\/www.w3.org\/ns\/wsdl\/soap',
     deps: ['WSDL_2_0'],
     tis: [{
-        ln: 'Module',
-        tn: null,
-        bti: 'WSDL_2_0.ExtensibleDocumentedType',
-        ps: [{
-            n: 'otherAttributes',
-            t: 'aa'
-          }, {
-            n: 'ref',
-            rq: true,
-            an: {
-              lp: 'ref'
-            },
-            t: 'a'
-          }, {
-            n: 'required',
-            ti: 'Boolean',
-            an: {
-              lp: 'required'
-            },
-            t: 'a'
-          }]
-      }, {
         ln: 'Header',
         tn: null,
         bti: 'WSDL_2_0.ExtensibleDocumentedType',
@@ -45,6 +23,28 @@ var WSDL_SOAP_2_0_Module_Factory = function () {
             ti: 'Boolean',
             an: {
               lp: 'mustUnderstand'
+            },
+            t: 'a'
+          }, {
+            n: 'required',
+            ti: 'Boolean',
+            an: {
+              lp: 'required'
+            },
+            t: 'a'
+          }]
+      }, {
+        ln: 'Module',
+        tn: null,
+        bti: 'WSDL_2_0.ExtensibleDocumentedType',
+        ps: [{
+            n: 'otherAttributes',
+            t: 'aa'
+          }, {
+            n: 'ref',
+            rq: true,
+            an: {
+              lp: 'ref'
             },
             t: 'a'
           }, {
