@@ -2,9 +2,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>xlink-v_1_0</artifactId>
+	<artifactId>jaxb3.xhtml-v_1_0-strict</artifactId>
 	<packaging>jar</packaging>
-	<name>W3C XLink 1.0</name>
+	<name>W3C XHTML 1.0 Strict JAXB3</name>
 	<parent>
 		<groupId>org.w3c-schemas</groupId>
 		<artifactId>w3c-schema-parent</artifactId>
@@ -13,13 +13,13 @@
 	</parent>
 	<dependencies>
 		<dependency>
-			<groupId>javax.xml.bind</groupId>
-			<artifactId>jaxb-api</artifactId>
+			<groupId>jakarta.xml.bind</groupId>
+			<artifactId>jakarta.xml.bind-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.jvnet.jaxb2_commons</groupId>
-			<artifactId>jaxb2-basics-runtime</artifactId>
+			<groupId>net.mcbluna.jaxb3_commons</groupId>
+			<artifactId>jaxb3-basics</artifactId>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
@@ -32,28 +32,21 @@
 				<configuration>
 					<archive>
 						<manifestEntries>
-							<Automatic-Module-Name>org.w3c_schemas.xlink.v_1_0</Automatic-Module-Name>
+							<Automatic-Module-Name>org.w3c_schemas.xhtml.v_1_0_strict</Automatic-Module-Name>
 						</manifestEntries>
 					</archive>
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb2-plugin</artifactId>
+				<groupId>com.helger.maven</groupId>
+				<artifactId>jaxb30-maven-plugin</artifactId>
 				<configuration>
 					<schemas>
 						<schema>
-							<url>http://www.w3.org/1999/xlink.xsd</url>
+							<url>http://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd</url>
 						</schema>
 					</schemas>
 				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-antrun-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>

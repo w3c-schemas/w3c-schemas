@@ -12,6 +12,7 @@
 	</parent>
 	<modules>
 		<module>2001</module>
+		<module>2001-jaxb3</module>
 	</modules>
 	<build>
 		<defaultGoal>install</defaultGoal>

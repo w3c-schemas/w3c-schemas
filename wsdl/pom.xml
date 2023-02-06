@@ -12,6 +12,7 @@
 	</parent>
 	<modules>
 		<module>2.0</module>
+		<module>2.0-jaxb3</module>
 	</modules>
 	<build>
 		<defaultGoal>install</defaultGoal>

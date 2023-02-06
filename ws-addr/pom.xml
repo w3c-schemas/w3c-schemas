@@ -12,6 +12,7 @@
 	</parent>
 	<modules>
 		<module>1.0-Core</module>
+		<module>1.0-Core-jaxb3</module>
 	</modules>
 	<build>
 		<defaultGoal>install</defaultGoal>

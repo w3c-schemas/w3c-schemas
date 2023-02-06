@@ -12,6 +12,7 @@
 	</parent>
 	<modules>
 		<module>1.0-Strict</module>
+		<module>1.0-Strict-jaxb3</module>
 	</modules>
 	<build>
 		<defaultGoal>install</defaultGoal>

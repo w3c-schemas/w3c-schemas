@@ -122,12 +122,27 @@
 				<artifactId>jsonix-schema-compiler</artifactId>
 				<version>${jsonix-schema-compiler.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>jakarta.xml.bind</groupId>
+				<artifactId>jakarta.xml.bind-api</artifactId>
+				<version>4.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>net.mcbluna.jaxb3_commons</groupId>
+				<artifactId>jaxb3-basics</artifactId>
+				<version>0.15.0</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<build>
 		<defaultGoal>install</defaultGoal>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>com.helger.maven</groupId>
+					<artifactId>jaxb30-maven-plugin</artifactId>
+					<version>0.16.1</version>
+				</plugin>
 				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.8.0</version>
