@@ -8,17 +8,9 @@
 	<parent>
 		<groupId>org.w3c-schemas</groupId>
 		<artifactId>w3c-schemas-project</artifactId>
-		<version>2.0.0</version>
+		<version>2.1.0-SNAPSHOT</version>
 	</parent>
 	<dependencies>
-		<dependency>
-			<groupId>org.jvnet.jaxb2_commons</groupId>
-			<artifactId>jaxb2-basics-runtime</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.glassfish.jaxb</groupId>
-			<artifactId>jaxb-runtime</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.w3c-schemas</groupId>
 			<artifactId>w3c-schemas</artifactId>
@@ -30,6 +22,69 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
+					<groupId>com.helger.maven</groupId>
+					<artifactId>jaxb30-maven-plugin</artifactId>
+					<executions>
+						<execution>
+							<goals>
+								<goal>generate</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
+						<strict>false</strict>
+						<extension>true</extension>
+						<schemaIncludes/>
+						<bindings>
+							<binding>
+								<dependencyResource>
+									<groupId>${project.groupId}</groupId>
+									<artifactId>w3c-schemas</artifactId>
+									<resource>w3c/globalBindings.jaxb3.xjb</resource>
+									<version>${project.version}</version>
+								</dependencyResource>
+							</binding>
+						</bindings>
+						<catalogs>
+							<catalog>
+								<dependencyResource>
+									<groupId>${project.groupId}</groupId>
+									<artifactId>w3c-schemas</artifactId>
+									<resource>w3c/catalog.cat</resource>
+									<version>${project.version}</version>
+								</dependencyResource>
+							</catalog>
+						</catalogs>
+						<args>
+							<arg>-XfixJAXB1058</arg>
+							<arg>-XtoString</arg>
+							<arg>-Xequals</arg>
+							<arg>-XhashCode</arg>
+							<arg>-Xcopyable</arg>
+							<arg>-Xmergeable</arg>
+							<arg>-Xsetters</arg>
+							<arg>-Xwildcard</arg>
+							<arg>-Xinject-code</arg>
+							<arg>-Xinheritance</arg>
+							<arg>-Xfluent-api</arg>
+							<arg>-Xsimplify</arg>
+						</args>
+						<plugins>
+							<dependency>
+								<groupId>net.java.dev.jaxb2-commons</groupId>
+								<artifactId>jaxb-fluent-api</artifactId>
+								<version>2.1.8</version>
+							</dependency>
+							<dependency>
+								<groupId>net.mcbluna.jaxb3_commons</groupId>
+								<artifactId>jaxb3-basics</artifactId>
+								<version>0.15.0</version>
+							</dependency>
+						</plugins>
+					</configuration>
+				</plugin>
+				<plugin>
 					<groupId>org.jvnet.jaxb2.maven2</groupId>
 					<artifactId>maven-jaxb2-plugin</artifactId>
 					<executions>
@@ -40,9 +95,6 @@
 						</execution>
 					</executions>
 					<configuration>
-						<!--schemaDirectory>${project.build.directory}/unpacked-resources</schemaDirectory>
-						<bindingDirectory>src/main/resources</bindingDirectory-->
-						<!--catalog>src/main/resources/catalog.cat</catalog-->
 						<useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
 						<strict>false</strict>
 						<extension>true</extension>
@@ -80,7 +132,6 @@
 							<arg>-Xinheritance</arg>
 							<arg>-Xfluent-api</arg>
 							<arg>-Xsimplify</arg>
-							<!--arg>-Xvisitor</arg-->
 							<arg>-Xjsonix</arg>
 							<arg>-Xjsonix-compact</arg>
 							<arg>-Xjsonix-generateJsonSchema</arg>
@@ -94,10 +145,6 @@
 								<groupId>org.jvnet.jaxb2_commons</groupId>
 								<artifactId>jaxb2-fluent-api</artifactId>
 							</plugin>
-							<!--plugin>
-								<groupId>com.massfords</groupId>
-								<artifactId>jaxb-visitor</artifactId>
-							</plugin-->
 							<dependency>
 								<groupId>org.hisrc.jsonix</groupId>
 								<artifactId>jsonix-schema-compiler</artifactId>

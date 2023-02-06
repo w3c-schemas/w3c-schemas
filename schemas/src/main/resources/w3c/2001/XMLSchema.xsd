@@ -115,8 +115,7 @@
  <xs:complexType name="annotated">
    <xs:annotation>
      <xs:documentation>
-       This type is extended by all types which allow annotation
-       other than &lt;schema&gt; itself
+       This type is extended by all types which allow annotation other than `schema` itself.
      </xs:documentation>
    </xs:annotation>
    <xs:complexContent>
