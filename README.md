@@ -32,6 +32,11 @@ unmarshaller.unmarshalFile("tests/locator-01.xml", function(result) {
 
 # Changelog
 
+## 3.0.0
+
+- use `jakarta.xml.bind` instead of `java.xml.bind`
+- update dependencies
+
 ## 2.0.0
 
 - use new group id `org.w3c-schemas`
