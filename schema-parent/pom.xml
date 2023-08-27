@@ -109,6 +109,20 @@
 					<artifactId>maven-antrun-plugin</artifactId>
 					<executions>
 						<execution>
+							<phase>generate-sources</phase>
+							<configuration>
+								<target>
+									<replace dir="target/generated-sources" value="jakarta.xml.bind">
+										<include name="**/*.java"/>
+										<replacetoken>javax.xml.bind</replacetoken>
+									</replace>
+								</target>
+							</configuration>
+							<goals>
+								<goal>run</goal>
+							</goals>
+						</execution>
+						<execution>
 							<id>package-scripts</id>
 							<phase>package</phase>
 							<configuration>
