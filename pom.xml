@@ -44,7 +44,6 @@
 		<module>xinclude</module>
 		<module>xlink</module>
 		<module>XMLSchema</module>
-		<module>scripts</module>
 	</modules>
 	<profiles>
 		<profile>
@@ -113,8 +112,6 @@
 		<jaxb2-basics.version>1.11.1</jaxb2-basics.version>
 		<jaxb.version>3.0.2</jaxb.version>
 		<maven-jaxb2-plugin.version>0.15.1</maven-jaxb2-plugin.version>
-		<jsonix-schema-compiler.version>2.3.8</jsonix-schema-compiler.version>
-		<jsonix.version>2.4.0</jsonix.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -165,11 +162,6 @@
 				<groupId>javax.xml.bind</groupId>
 				<artifactId>jaxb-api</artifactId>
 				<version>${jaxb.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.hisrc.jsonix</groupId>
-				<artifactId>jsonix-schema-compiler</artifactId>
-				<version>${jsonix-schema-compiler.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
