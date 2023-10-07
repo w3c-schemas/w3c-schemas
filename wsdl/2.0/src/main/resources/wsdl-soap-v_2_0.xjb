@@ -1,8 +1,9 @@
-<jaxb:bindings version="1.0"
-	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+<jaxb:bindings
+	version="3.0"
+	xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
-	xmlns:simplify="http://jaxb2-commons.dev.java.net/basic/simplify"
+	xmlns:simplify="urn:jaxb.jvnet.org:plugin:simplify"
 	jaxb:extensionBindingPrefixes="xjc simplify">
 
 	<jaxb:bindings schemaLocation="http://www.w3.org/2007/06/wsdl/soap.xsd" node="/xs:schema">
@@ -12,5 +13,3 @@
 	</jaxb:bindings>
 
 </jaxb:bindings>
-
-

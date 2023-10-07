@@ -12,8 +12,8 @@
 	</parent>
 	<dependencies>
 		<dependency>
-			<groupId>org.jvnet.jaxb2_commons</groupId>
-			<artifactId>jaxb2-basics-runtime</artifactId>
+			<groupId>org.jvnet.jaxb</groupId>
+			<artifactId>jaxb-plugins-runtime</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jaxb</groupId>
@@ -30,8 +30,8 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<groupId>org.jvnet.jaxb2.maven2</groupId>
-					<artifactId>maven-jaxb2-plugin</artifactId>
+					<groupId>org.jvnet.jaxb</groupId>
+					<artifactId>jaxb-maven-plugin</artifactId>
 					<executions>
 						<execution>
 							<goals>
@@ -40,9 +40,6 @@
 						</execution>
 					</executions>
 					<configuration>
-						<!--schemaDirectory>${project.build.directory}/unpacked-resources</schemaDirectory>
-						<bindingDirectory>src/main/resources</bindingDirectory-->
-						<!--catalog>src/main/resources/catalog.cat</catalog-->
 						<useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
 						<strict>false</strict>
 						<extension>true</extension>
@@ -83,34 +80,15 @@
 						</args>
 						<plugins>
 							<plugin>
-								<groupId>org.jvnet.jaxb2_commons</groupId>
-								<artifactId>jaxb2-basics</artifactId>
+								<groupId>org.jvnet.jaxb</groupId>
+								<artifactId>jaxb-plugins-runtime</artifactId>
 							</plugin>
 							<plugin>
-								<groupId>org.jvnet.jaxb2_commons</groupId>
-								<artifactId>jaxb2-fluent-api</artifactId>
+								<groupId>org.jvnet.jaxb</groupId>
+								<artifactId>jaxb-plugins</artifactId>
 							</plugin>
 						</plugins>
 					</configuration>
-				</plugin>
-				<plugin>
-					<artifactId>maven-antrun-plugin</artifactId>
-					<executions>
-						<execution>
-							<phase>generate-sources</phase>
-							<configuration>
-								<target>
-									<replace dir="target/generated-sources" value="jakarta.xml.bind">
-										<include name="**/*.java"/>
-										<replacetoken>javax.xml.bind</replacetoken>
-									</replace>
-								</target>
-							</configuration>
-							<goals>
-								<goal>run</goal>
-							</goals>
-						</execution>
-					</executions>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
